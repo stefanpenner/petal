@@ -9,7 +9,7 @@ describe('Leaf - qunit', function() {
 
     assert(m.hasDefine, false, 'no module is defined');
     assert.equal(m.isAnonymous, undefined, 'module is anonymous');
-    assert.deepEqual(m.imports, [], 'has no imports');
-    assert.deepEqual(m.exports, [], 'has no exports');
+    assert.deepEqual(m.imports, []);
+    assert.deepEqual(m.exports, []);
   });
 });

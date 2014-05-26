@@ -2,10 +2,10 @@ var Leaf = require('../index.js');
 var assert = require('assert');
 var fs     = require('fs');
 
-describe('Leaf - ember-data (brings its own embeded loader)', function() {
+describe('Leaf - own loader', function() {
   it("has correct import/exports", function() {
-    var source = fs.readFileSync("bower_components/ember-data/ember-data.js");
-    var m = new Leaf("bower_components/ember-data/ember-data.js", source);
+    var source = fs.readFileSync("tests/fixtures/own-loader.js");
+    var m = new Leaf("tests/fixtures/own-loader.js", source);
 
     assert(m.hasDefine, false, 'no module is defined');
     assert.equal(m.isAnonymous, undefined, 'module is anonymous');

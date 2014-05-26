@@ -9,7 +9,7 @@ describe('Leaf - jquery', function() {
 
     assert(m.hasDefine, true, 'module has define property');
     assert.equal(m.isAnonymous, false, 'module is named');
-    assert.deepEqual(m.imports, [], 'has no imports');
-    assert.deepEqual(m.exports, ['default'], 'has a default export');
+    assert.deepEqual(m.imports, []);
+    assert.deepEqual(m.exports, ['default']);
   });
 });

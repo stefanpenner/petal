@@ -9,7 +9,7 @@ describe('Leaf - ember/load-initializers', function() {
 
     assert(m.hasDefine, true, 'no module is defined');
     assert.equal(m.isAnonymous, false, 'module is anonymous');
-    assert.deepEqual(m.imports, [], 'has no imports');
-    assert.deepEqual(m.exports, ['default'], 'has no exports');
+    assert.deepEqual(m.imports, []);
+    assert.deepEqual(m.exports, ['default']);
   });
 });
