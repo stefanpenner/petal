@@ -11,5 +11,7 @@ describe('Leaf - jquery', function() {
     assert.equal(m.isAnonymous, false, 'module is named');
     assert.deepEqual(m.imports, []);
     assert.deepEqual(m.exports, ['default']);
+
+    assert.equal(m.name, 'jquery');
   });
 });

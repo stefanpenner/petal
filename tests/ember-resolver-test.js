@@ -11,5 +11,7 @@ describe('Leaf - ember/resolver', function() {
     assert.equal(m.isAnonymous, false, 'module is anonymous');
     assert.deepEqual(m.imports, []);
     assert.deepEqual(m.exports, ['default']);
+
+    assert.equal(m.name, 'resolver');
   });
 });

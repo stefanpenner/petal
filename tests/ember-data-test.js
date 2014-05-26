@@ -11,5 +11,7 @@ describe('Leaf - ember-data (brings its own embeded loader)', function() {
     assert.equal(m.isAnonymous, undefined, 'module is anonymous');
     assert.deepEqual(m.imports, []);
     assert.deepEqual(m.exports, []);
+
+    assert.equal(m.name, undefined);
   });
 });
