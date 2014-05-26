@@ -1,0 +1,25 @@
+{
+  "name": "leaf",
+  "main": "index.js",
+  "version": "0.0.0",
+  "authors": [
+    "Stefan Penner <stefan.penner@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "moment": "~2.6.0",
+    "ember-data": "~0.0.14",
+    "ember-load-initializers": "https://github.com/stefanpenner/ember-load-initializers.git#~0.0.1",
+    "ember-resolver": "~0.0.1",
+    "handlebars": "~1.3.0",
+    "qunit": "~1.14.0",
+    "ic-ajax": "~1.0.4"
+  }
+}

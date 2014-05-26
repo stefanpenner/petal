@@ -1,0 +1,18 @@
+{
+  "name": "leaf",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha tests/**/*-test.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "esprima": "~1.2.2",
+    "glob": "~4.0.0"
+  },
+  "devDependencies": {
+    "mocha": "~1.19.0"
+  }
+}
