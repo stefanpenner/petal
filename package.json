@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "ci": "bower install && mocha tests/**/*-test.js",
     "test": "mocha tests/**/*-test.js"
   },
   "author": "",
@@ -15,6 +16,7 @@
   },
   "devDependencies": {
     "mocha": "~1.19.0",
-    "esprima-ast-equality": "0.0.4"
+    "esprima-ast-equality": "0.0.4",
+    "bower": "~1.3.3"
   }
 }
