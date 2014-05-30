@@ -10,7 +10,7 @@ describe('Leaf - annonmous', function() {
     var m = new Leaf("./tests/fixtures/anonymous.js", source);
 
     assert(m.hasDefine, true, 'module has define property');
-    assert.equal(m.isAnonymous, true, 'module is named');
+    assert.equal(m.isAnonymous, true, 'module is not named');
 
     var ast = m.deanonymize('foobarbaz');
     astEquality(escodegen.generate(m.ast), fs.readFileSync('./tests/fixtures/was-anonymous.js'));
