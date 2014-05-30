@@ -25,6 +25,7 @@ describe('Leaf - annonmous', function() {
 
     var ast = m.deanonymize('foobarbaz');
 
+    assert(!m.isAnonymous, 'expected module to be named');
     assert.deepEqual(m.imports, [
       'ember',
       'foobarbaz/isolated-container',
