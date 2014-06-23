@@ -5,8 +5,8 @@ var expect = require('chai').expect;
 
 describe('Leaf - variable export var name', function() {
   it('has correct import/exports', function() {
-    var source = fs.readFileSync('./tests/fixtures/exports-with-variable-name.js');
-    var m = new Leaf('./tests/fixtures/exports-with-variable-export-name.js', source);
+    var source = fs.readFileSync('./tests/fixtures/multiple-property-exports.js');
+    var m = new Leaf('./tests/fixtures/multiple-property-exports.js', source);
 
     assert(m.hasDefine, false, 'no module is defined');
     assert.equal(m.isAnonymous, false, 'module is anonymous');
@@ -16,7 +16,12 @@ describe('Leaf - variable export var name', function() {
     });
 
     expect(m.exports).to.deep.equal({
-      'foobarbaz': ['default']
+      'foobarbaz': [
+        'default',
+        'a',
+        'b',
+        'c'
+      ]
     });
   });
 });

@@ -1,29 +1,73 @@
 var Leaf = require('../index.js');
 var assert = require('assert');
-var fs     = require('fs');
+var fs = require('fs');
+var expect = require('chai').expect;
 
 describe('Leaf - moment', function() {
-  it("has correct import/exports", function() {
-    var source = fs.readFileSync("bower_components/moment/moment.js");
-    var m = new Leaf("bower_components/moment/moment.js", source);
+  it('has correct import/exports', function() {
+    var source = fs.readFileSync('bower_components/moment/moment.js');
+    var m = new Leaf('bower_components/moment/moment.js', source);
 
     assert(m.hasDefine, true, 'no module is defined');
     assert.equal(m.isAnonymous, false, 'module is anonymous');
-    assert.deepEqual(m.imports, []);
-    assert.deepEqual(m.exports, ['default']);
+    assert.deepEqual(m.imports, {
+      'moment': []
+    });
 
-    assert.equal(m.name, 'moment');
+    assert.deepEqual(m.exports, {
+      'moment': [
+        'default',
+        'utc',
+        'unix',
+        'duration',
+        'version',
+        'defaultFormat',
+        'momentProperties',
+        'updateOffset',
+        'lang',
+        'langData',
+        'isMoment',
+        'isDuration',
+        'normalizeUnits',
+        'invalid',
+        'parseZone',
+        'parseTwoDigitYear',
+        'fn'
+      ]
+    });
   });
 
-  it("works with minified version", function() {
-    var source = fs.readFileSync("bower_components/moment/min/moment.min.js");
-    var m = new Leaf("bower_components/moment/min/moment.js", source);
+  it('works with minified version', function() {
+    var source = fs.readFileSync('bower_components/moment/min/moment.min.js');
+    var m = new Leaf('bower_components/moment/min/moment.js', source);
 
     assert(m.hasDefine, true, 'no module is defined');
     assert.equal(m.isAnonymous, false, 'module is anonymous');
-    assert.deepEqual(m.imports, []);
-    assert.deepEqual(m.exports, ['default']);
 
-    assert.equal(m.name, 'moment');
+    expect(m.imports).to.deep.equal({
+      'moment': []
+    });
+
+    expect(m.exports).to.deep.equal({
+      'moment': [
+        'default',
+        'utc',
+        'unix',
+        'duration',
+        'version',
+        'defaultFormat',
+        'momentProperties',
+        'updateOffset',
+        'lang',
+        'langData',
+        'isMoment',
+        'isDuration',
+        'normalizeUnits',
+        'invalid',
+        'parseZone',
+        'parseTwoDigitYear',
+        'fn'
+      ]
+    });
   });
 });
