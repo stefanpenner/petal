@@ -1,10 +1,10 @@
 leaf [![Build Status](https://travis-ci.org/stefanpenner/leaf.svg)](https://travis-ci.org/stefanpenner/leaf)
 ====
 
-library for inspecting and renaming various js module formats
+library for inspecting and renaming various js module formats. This is still WIP, and should be considered pre-alpha
 
 ```js
- var m = new Leaf('vendor/htmlbars-runtime.amd.js', sourceOrAst);
+var m = new Leaf('vendor/htmlbars-runtime.amd.js', sourceOrAst);
 m.hasDefine   // => true
 m.isAnonymous // => true
 
