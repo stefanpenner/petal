@@ -61,33 +61,33 @@ describe('Leaf - handlebars remap:', function() {
         'exports'
       ],
       'handlebars@2.0.0/safe-string': [ 'exports' ],
-      'handlebars@2.0.0/utils':       [ 'handlebars@2.0.0/utils/safe-string', 'exports' ],
+      'handlebars@2.0.0/utils':       [ 'handlebars@2.0.0/safe-string', 'exports' ],
       'handlebars@2.0.0/exception':   [ 'exports' ],
       'handlebars@2.0.0/base': [
-        'handlebars@2.0.0/base/utils',
-        'handlebars@2.0.0/base/exception',
+        'handlebars@2.0.0/utils',
+        'handlebars@2.0.0/exception',
         'exports'
       ],
       'handlebars@2.0.0/runtime': [
-        'handlebars@2.0.0/runtime/utils',
-        'handlebars@2.0.0/runtime/exception',
-        'handlebars@2.0.0/runtime/base',
+        'handlebars@2.0.0/utils',
+        'handlebars@2.0.0/exception',
+        'handlebars@2.0.0/base',
         'exports'
       ],
-      'handlebars@2.0.0/compiler/ast':    [ '../exception', 'exports' ],
+      'handlebars@2.0.0/compiler/ast':    [ 'handlebars@2.0.0/exception', 'exports' ],
       'handlebars@2.0.0/compiler/parser': [ 'exports' ],
       'handlebars@2.0.0/compiler/base': [
-        'handlebars@2.0.0/compiler/base/parser',
-        'handlebars@2.0.0/compiler/base/ast',
+        'handlebars@2.0.0/compiler/parser',
+        'handlebars@2.0.0/compiler/ast',
         'exports'
       ],
       'handlebars@2.0.0/compiler/compiler': [
-        '../exception',
+        'handlebars@2.0.0/exception',
         'exports'
       ],
       'handlebars@2.0.0/compiler/javascript-compiler': [
-        '../base',
-        '../exception',
+        'handlebars@2.0.0/base',
+        'handlebars@2.0.0/exception',
         'exports'
       ]
     });

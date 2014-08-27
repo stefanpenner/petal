@@ -48,12 +48,12 @@ describe('Leaf - htmlbars remap:', function() {
         'htmlbars-runtime@2.0.0/utils',
         'exports'
       ],
-      'htmlbars-runtime/hooks': [
+      'htmlbars-runtime@2.0.0/hooks': [
         'htmlbars-runtime@2.0.0/utils',
         'handlebars/safe-string',
         'exports'
       ],
-      'htmlbars-runtime/utils': [
+      'htmlbars-runtime@2.0.0/utils': [
         'exports'
       ]
     });
