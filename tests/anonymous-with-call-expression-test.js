@@ -9,7 +9,6 @@ describe('Leaf - annonmous', function() {
   it('has correct imports/exports', function() {
     var source = fs.readFileSync('./tests/fixtures/anonymous-call-expression.js');
     var m = new Leaf('./tests/fixtures/anonymous-call-expression.js', source);
-
     assert(m.hasDefine, 'expected module to have a define');
     assert(m.isAnonymous, 'expected module to not be named');
 
