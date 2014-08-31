@@ -7,15 +7,16 @@ describe('Leaf - handlebars remap:', function() {
   it('has correct import/exports', function() {
     var source = fs.readFileSync('bower_components/handlebars/handlebars.amd.js');
     var m = new Leaf('bower_components/handlebars/handlebars.amd.js', source);
+    var remappedLeaf;
 
     assert(m.hasDefine, true, 'no module is defined');
     assert.equal(m.isAnonymous, false, 'module is anonymous');
 
-    m.remap('handlebars@2.0.0');
+    var remappedLeaf = m.remap('handlebars@2.0.0');
 
     // this version of handlebars is actually totally broken,
     // it exports invalid paths....
-    expect(m.exports).to.deep.equal({
+    expect(remappedLeaf.exports).to.deep.equal({
       'handlebars@2.0.0/safe-string': [ 'default' ],
       'handlebars@2.0.0/utils': [
         'extend',
@@ -51,7 +52,7 @@ describe('Leaf - handlebars remap:', function() {
       'handlebars@2.0.0/compiler/javascript-compiler': [ 'default' ]
     });
 
-    expect(m.imports).to.deep.equal({
+    expect(remappedLeaf.imports).to.deep.equal({
       'handlebars@2.0.0': [
         'handlebars@2.0.0/handlebars.runtime',
         'handlebars@2.0.0/handlebars/compiler/ast',

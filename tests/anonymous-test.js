@@ -13,8 +13,8 @@ describe('Leaf - annonmous', function() {
     assert(m.hasDefine, true, 'module has define property');
     assert.equal(m.isAnonymous, true, 'module is not named');
 
-    m.remap('foobarbaz');
+    var remapped = m.remap('foobarbaz');
 
-    astEquality(escodegen.generate(m.ast), fs.readFileSync('./tests/fixtures/was-anonymous.js'));
+    astEquality(escodegen.generate(remapped.ast), fs.readFileSync('./tests/fixtures/was-anonymous.js'));
   });
 });

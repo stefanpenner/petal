@@ -20,17 +20,17 @@ describe('Leaf - annonmous', function() {
       '.': ['default']
     });
 
-    m.remap('foobarbaz');
+    var remapped = m.remap('foobarbaz');
 
-    assert(!m.isAnonymous, 'expected module to be named');
-    expect(m.exports).to.deep.equal({
+    assert(!remapped.isAnonymous, 'expected module to be named');
+    expect(remapped.exports).to.deep.equal({
       'foobarbaz': ['default']
     });
 
-    expect(m.imports).to.deep.equal({
+    expect(remapped.imports).to.deep.equal({
       'foobarbaz': []
     });
 
-    astEquality(escodegen.generate(m.ast), fs.readFileSync('./tests/fixtures/was-anonymous-call-expression.js'));
+    astEquality(escodegen.generate(remapped.ast), fs.readFileSync('./tests/fixtures/was-anonymous-call-expression.js'));
   });
 });
