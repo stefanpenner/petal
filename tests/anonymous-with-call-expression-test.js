@@ -9,6 +9,7 @@ describe('Leaf - annonmous', function() {
   it('has correct imports/exports', function() {
     var source = fs.readFileSync('./tests/fixtures/anonymous-call-expression.js');
     var m = new Leaf('./tests/fixtures/anonymous-call-expression.js', source);
+    var remapped;
     assert(m.hasDefine, 'expected module to have a define');
     assert(m.isAnonymous, 'expected module to not be named');
 
@@ -20,7 +21,7 @@ describe('Leaf - annonmous', function() {
       '.': ['default']
     });
 
-    var remapped = m.remap('foobarbaz');
+    remapped = m.remap('foobarbaz');
 
     assert(!remapped.isAnonymous, 'expected module to be named');
     expect(remapped.exports).to.deep.equal({

@@ -12,7 +12,7 @@ describe('Leaf - handlebars remap:', function() {
     assert(m.hasDefine, true, 'no module is defined');
     assert.equal(m.isAnonymous, false, 'module is anonymous');
 
-    var remappedLeaf = m.remap('handlebars@2.0.0');
+    remappedLeaf = m.remap('handlebars@2.0.0');
 
     // this version of handlebars is actually totally broken,
     // it exports invalid paths....
