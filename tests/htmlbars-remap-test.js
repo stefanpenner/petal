@@ -7,13 +7,14 @@ describe('Leaf - htmlbars remap:', function() {
   it('has correct import/exports', function() {
     var source = fs.readFileSync('vendor/htmlbars-runtime.amd.js');
     var m = new Leaf('vendor/htmlbars-runtime.amd.js', source);
+    var remappedLeaf;
 
     assert(m.hasDefine, true, 'no module is defined');
     assert.equal(m.isAnonymous, false, 'module is anonymous');
 
-    m.remap('htmlbars-runtime@2.0.0');
+    remappedLeaf = m.remap('htmlbars-runtime@2.0.0');
 
-    expect(m.exports).to.deep.equal({
+    expect(remappedLeaf.exports).to.deep.equal({
       'htmlbars-runtime@2.0.0': [
         'domHelpers',
         'Morph'
@@ -38,7 +39,7 @@ describe('Leaf - htmlbars remap:', function() {
       ]
     });
 
-    expect(m.imports).to.deep.equal({
+    expect(remappedLeaf.imports).to.deep.equal({
       'htmlbars-runtime@2.0.0': [
         'htmlbars-runtime@2.0.0/dom_helpers',
         'morph',

@@ -26,10 +26,10 @@ describe('Leaf - anoymous', function() {
       ]
     });
 
-    m.remap('foobarbaz');
+    var remapped = m.remap('foobarbaz');
 
-    assert(!m.isAnonymous, 'expected module to be named');
-    expect(m.imports).to.deep.equal({
+    assert(!remapped.isAnonymous, 'expected module to be named');
+    expect(remapped.imports).to.deep.equal({
       'foobarbaz': [
         'ember',
         'foobarbaz/isolated-container',
@@ -42,6 +42,6 @@ describe('Leaf - anoymous', function() {
       ]
     });
 
-    astEquality(escodegen.generate(m.ast), fs.readFileSync('./tests/fixtures/was-anonymous-with-deps.js'));
+    astEquality(escodegen.generate(remapped.ast), fs.readFileSync('./tests/fixtures/was-anonymous-with-deps.js'));
   });
 });
