@@ -8,7 +8,7 @@ describe('Leaf - jquery', function() {
     var source = fs.readFileSync('bower_components/jquery/dist/jquery.js');
     var m = new Leaf('bower_components/jquery/dist/jquery.js', source);
 
-    assert(m.hasDefine, true, 'module has define property');
+    assert(m.hasDefine(), 'module has define property');
     assert.equal(m.isAnonymous, false, 'module is named');
 
     expect(m.imports).to.deep.equal({

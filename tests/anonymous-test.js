@@ -11,7 +11,7 @@ describe('Leaf - annonmous', function() {
     var m = new Leaf('./tests/fixtures/anonymous.js', source);
     var remapped;
 
-    assert(m.hasDefine, true, 'module has define property');
+    assert(m.hasDefine(), 'module has define property');
     assert.equal(m.isAnonymous, true, 'module is not named');
 
     remapped = m.remap('foobarbaz');

@@ -10,7 +10,7 @@ describe('Leaf - anoymous', function() {
     var source = fs.readFileSync('./tests/fixtures/anonymous-with-deps.js');
     var m = new Leaf('./tests/fixtures/anonymous-with-deps.js', source);
 
-    assert(m.hasDefine, 'expected module to have a define');
+    assert(m.hasDefine(), 'expected module to have a define');
     assert(m.isAnonymous, 'expected module to not be named');
 
     expect(m.imports).to.deep.equal({

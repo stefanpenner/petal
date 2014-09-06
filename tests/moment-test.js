@@ -8,7 +8,7 @@ describe('Leaf - moment', function() {
     var source = fs.readFileSync('bower_components/moment/moment.js');
     var m = new Leaf('bower_components/moment/moment.js', source);
 
-    assert(m.hasDefine, true, 'no module is defined');
+    assert(m.hasDefine(), 'no module is defined');
     assert.equal(m.isAnonymous, false, 'module is anonymous');
     assert.deepEqual(m.imports, {
       'moment': []
@@ -23,7 +23,7 @@ describe('Leaf - moment', function() {
     var source = fs.readFileSync('bower_components/moment/moment.js');
     var m = new Leaf('bower_components/moment/moment.js', source);
 
-    assert(m.hasDefine, true, 'no module is defined');
+    assert(m.hasDefine(), 'no module is defined');
     assert.equal(m.isAnonymous, false, 'module is anonymous');
     assert.deepEqual(m.imports, {
       'moment': []
@@ -56,7 +56,7 @@ describe('Leaf - moment', function() {
     var source = fs.readFileSync('bower_components/moment/min/moment.min.js');
     var m = new Leaf('bower_components/moment/min/moment.js', source);
 
-    assert(m.hasDefine, true, 'no module is defined');
+    assert(m.hasDefine(), 'no module is defined');
     assert.equal(m.isAnonymous, false, 'module is anonymous');
 
     expect(m.imports).to.deep.equal({

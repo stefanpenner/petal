@@ -9,7 +9,7 @@ describe('Leaf - htmlbars remap:', function() {
     var m = new Leaf('vendor/htmlbars-runtime.amd.js', source);
     var remappedLeaf;
 
-    assert(m.hasDefine, true, 'no module is defined');
+    assert(m.hasDefine(), 'no module is defined');
     assert.equal(m.isAnonymous, false, 'module is anonymous');
 
     remappedLeaf = m.remap('htmlbars-runtime@2.0.0');
