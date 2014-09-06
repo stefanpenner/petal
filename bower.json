@@ -14,16 +14,13 @@
     "tests"
   ],
   "devDependencies": {
-    "moment": "~2.6.0",
-    "ember-data": "~0.0.14",
+    "moment": "2.8.3",
+    "ember-data": "1.0.0-beta.9",
     "ember-load-initializers": "https://github.com/stefanpenner/ember-load-initializers.git#~0.0.1",
-    "ember-resolver": "~0.0.1",
+    "ember-resolver": "v0.1.7",
     "handlebars": "~1.3.0",
-    "qunit": "~1.14.0",
-    "ic-ajax": "~1.0.4",
+    "qunit": "~1.15.0",
+    "ic-ajax": "v2.0.1",
     "d3": "3.4.8"
-  },
-  "resolutions": {
-    "ember": ">=1.4 <2"
   }
 }

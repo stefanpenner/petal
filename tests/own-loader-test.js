@@ -8,7 +8,7 @@ describe('Leaf - own loader', function() {
     var source = fs.readFileSync('tests/fixtures/own-loader.js');
     var m = new Leaf('tests/fixtures/own-loader.js', source);
 
-    assert(m.hasDefine, false, 'no module is defined');
+    assert(m.hasDefine(), false, 'no module is defined');
     assert.equal(m.isAnonymous, undefined, 'module is anonymous');
 
     expect(m.imports).to.deep.equal({ });

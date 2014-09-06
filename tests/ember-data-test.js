@@ -8,7 +8,7 @@ describe('Leaf - ember-data (brings its own embeded loader)', function() {
     var source = fs.readFileSync('bower_components/ember-data/ember-data.js');
     var m = new Leaf('bower_components/ember-data/ember-data.js', source);
 
-    assert(m.hasDefine, false, 'no module is defined');
+    assert(m.hasDefine(), 'module has define property');
     assert.equal(m.isAnonymous, undefined, 'module is anonymous');
 
     expect(m.imports).to.deep.equal({ });

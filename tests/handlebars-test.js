@@ -8,7 +8,7 @@ describe('Leaf - handlebars', function() {
     var source = fs.readFileSync('bower_components/handlebars/handlebars.amd.js');
     var m = new Leaf('bower_components/handlebars/handlebars.amd.js', source);
 
-    assert(m.hasDefine, true, 'no module is defined');
+    assert(m.hasDefine(), 'no module is defined');
     assert.equal(m.isAnonymous, false, 'module is anonymous');
 
     expect(m.exports).to.deep.equal({

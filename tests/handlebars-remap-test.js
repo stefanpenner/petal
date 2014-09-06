@@ -9,7 +9,7 @@ describe('Leaf - handlebars remap:', function() {
     var m = new Leaf('bower_components/handlebars/handlebars.amd.js', source);
     var remappedLeaf;
 
-    assert(m.hasDefine, true, 'no module is defined');
+    assert(m.hasDefine(), 'no module is defined');
     assert.equal(m.isAnonymous, false, 'module is anonymous');
 
     remappedLeaf = m.remap('handlebars@2.0.0');

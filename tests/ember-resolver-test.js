@@ -8,15 +8,19 @@ describe('Leaf - ember/resolver', function() {
     var source = fs.readFileSync('bower_components/ember-resolver/dist/ember-resolver.js');
     var m = new Leaf('bower_components/ember-resolver/dist/ember-resolver.js', source);
 
-    assert(m.hasDefine, true, 'no module is defined');
+    assert(m.hasDefine(), 'no module is defined');
     assert.equal(m.isAnonymous, false, 'module is anonymous');
 
     expect(m.imports).to.deep.equal({
-      'resolver': []
+      'ember/resolver': [],
+      resolver: [ 'ember/resolver' ],
+      'ember/container-debug-adapter': []
     });
 
     expect(m.exports).to.deep.equal({
-      'resolver': ['default']
+      'ember/resolver': [ 'default' ],
+      resolver: [ 'default' ],
+      'ember/container-debug-adapter': [ 'default' ]
     });
   });
 });

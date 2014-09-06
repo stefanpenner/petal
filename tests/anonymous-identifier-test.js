@@ -11,7 +11,7 @@ describe('Leaf - annonmous with identifier', function() {
     var m = new Leaf('./tests/fixtures/anonymous-identifier.js', source);
     var remappedLeaf;
 
-    assert(m.hasDefine, 'expected module to have a define');
+    assert(m.hasDefine(), 'expected module to have a define');
     assert(m.isAnonymous, 'expected module to not be named');
 
     expect(m.imports).to.deep.equal({

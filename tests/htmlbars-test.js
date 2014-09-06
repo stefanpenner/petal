@@ -8,7 +8,7 @@ describe('Leaf - htmlbars', function() {
     var source = fs.readFileSync('vendor/htmlbars-runtime.amd.js');
     var m = new Leaf('vendor/htmlbars-runtime.amd.js', source);
 
-    assert(m.hasDefine, true, 'no module is defined');
+    assert(m.hasDefine(), 'no module is defined');
     assert.equal(m.isAnonymous, false, 'module is anonymous');
 
     expect(m.exports).to.deep.equal({

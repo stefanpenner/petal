@@ -8,7 +8,7 @@ describe('Leaf - qunit', function() {
     var source = fs.readFileSync('bower_components/qunit/qunit/qunit.js');
     var m = new Leaf('bower_components/qunit/qunit/qunit.js', source);
 
-    assert(m.hasDefine, false, 'no module is defined');
+    assert.equal(m.hasDefine(), false, 'no module is defined');
     assert.equal(m.isAnonymous, undefined, 'module is anonymous');
 
     expect(m.imports).to.deep.equal({ });
