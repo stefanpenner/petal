@@ -1,5 +1,5 @@
 {
-  "name": "leaf",
+  "name": "petal",
   "version": "0.0.0",
   "description": "",
   "main": "index.js",
@@ -7,7 +7,7 @@
     "ci": "bower install && mocha tests/**/*-test.js",
     "test": "mocha tests/**/*-test.js"
   },
-  "author": "",
+  "author": "Stefan Penner <stefan.penner@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "es-simpler-traverser": "0.0.1",
