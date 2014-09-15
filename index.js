@@ -1,1 +1,1 @@
-module.exports = require('./lib/Petal');
+module.exports = require('./lib/petal');
