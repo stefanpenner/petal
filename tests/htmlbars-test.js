@@ -1,12 +1,12 @@
-var Leaf = require('../index.js');
+var Petal = require('../index.js');
 var assert = require('assert');
 var fs = require('fs');
 var expect = require('chai').expect;
 
-describe('Leaf - htmlbars', function() {
+describe('Petal - htmlbars', function() {
   it('has correct import/exports', function() {
     var source = fs.readFileSync('vendor/htmlbars-runtime.amd.js');
-    var m = new Leaf('vendor/htmlbars-runtime.amd.js', source);
+    var m = new Petal('vendor/htmlbars-runtime.amd.js', source);
 
     assert(m.hasDefine(), 'no module is defined');
     assert.equal(m.isAnonymous, false, 'module is anonymous');
