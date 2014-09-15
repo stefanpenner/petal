@@ -3,7 +3,12 @@ petal
 
 [![Build Status](https://travis-ci.org/stefanpenner/leaf.svg)](https://travis-ci.org/stefanpenner/leaf)
 
-library for inspecting and renaming various js module formats. This is still WIP, and should be considered pre-alpha
+library for inspecting and renaming various js module formats. This is still WIP but in a usable state.
+
+```
+npm install petal --save
+```
+
 
 ```js
 var m = new Petal('vendor/htmlbars-runtime.amd.js', sourceOrAst);
