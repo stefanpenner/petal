@@ -1,12 +1,12 @@
-var Leaf = require('../index.js');
+var Petal = require('../index.js');
 var assert = require('assert');
 var fs = require('fs');
 var expect = require('chai').expect;
 
-describe('Leaf - ic-ajax', function() {
+describe('Petal - ic-ajax', function() {
   it('has correct imports/exports', function() {
     var source = fs.readFileSync('bower_components/ic-ajax/dist/amd/main.js');
-    var m = new Leaf('bower_components/ic-ajax/dist/amd/main.js', source);
+    var m = new Petal('bower_components/ic-ajax/dist/amd/main.js', source);
 
     assert(m.hasDefine(), 'module has define property');
     assert.equal(m.isAnonymous, true, 'module is named');

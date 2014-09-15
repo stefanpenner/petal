@@ -1,12 +1,12 @@
-var Leaf = require('../index.js');
+var Petal = require('../index.js');
 var assert = require('assert');
 var fs = require('fs');
 var expect = require('chai').expect;
 
-describe('Leaf - ember-qunit', function() {
+describe('Petal - ember-qunit', function() {
   it('has correct imports/exports', function() {
     var source = fs.readFileSync('bower_components/ember-qunit/dist/amd/main.js');
-    var m = new Leaf('bower_components/ember-qunit/dist/amd/main.js', source);
+    var m = new Petal('bower_components/ember-qunit/dist/amd/main.js', source);
 
     assert(m.hasDefine(), 'module has define property');
     assert(m.isAnonymous, 'module is anonymous');
@@ -36,11 +36,11 @@ describe('Leaf - ember-qunit', function() {
   });
   it('remaps correctly', function() {
     var source = fs.readFileSync('bower_components/ember-qunit/dist/amd/main.js');
-    var m = new Leaf('bower_components/ember-qunit/dist/amd/main.js', source);
+    var m = new Petal('bower_components/ember-qunit/dist/amd/main.js', source);
 
-    var remappedLeaf = m.remap('ember-qunit');
+    var remappedPetal = m.remap('ember-qunit');
 
-    expect(remappedLeaf.imports).to.deep.equal({
+    expect(remappedPetal.imports).to.deep.equal({
       'ember-qunit': [
         'ember',
         'ember-qunit/isolated-container',
@@ -54,7 +54,7 @@ describe('Leaf - ember-qunit', function() {
     });
 
 
-    expect(remappedLeaf.exports).to.deep.equal({
+    expect(remappedPetal.exports).to.deep.equal({
       'ember-qunit': [
         'globalize',
         'moduleFor',

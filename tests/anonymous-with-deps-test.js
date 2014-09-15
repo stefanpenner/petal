@@ -1,14 +1,14 @@
-var Leaf = require('../index.js');
+var Petal = require('../index.js');
 var assert = require('assert');
 var fs = require('fs');
 var astEquality = require('esprima-ast-equality');
 var escodegen = require('escodegen');
 var expect = require('chai').expect;
 
-describe('Leaf - anoymous', function() {
+describe('Petal - anoymous', function() {
   it('has correct imports/exports', function() {
     var source = fs.readFileSync('./tests/fixtures/anonymous-with-deps.js');
-    var m = new Leaf('./tests/fixtures/anonymous-with-deps.js', source);
+    var m = new Petal('./tests/fixtures/anonymous-with-deps.js', source);
 
     assert(m.hasDefine(), 'expected module to have a define');
     assert(m.isAnonymous, 'expected module to not be named');

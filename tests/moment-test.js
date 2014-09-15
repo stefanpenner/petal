@@ -1,12 +1,12 @@
-var Leaf = require('../index.js');
+var Petal = require('../index.js');
 var assert = require('assert');
 var fs = require('fs');
 var expect = require('chai').expect;
 
-describe('Leaf - moment', function() {
+describe('Petal - moment', function() {
   it('has correct import/exports', function() {
     var source = fs.readFileSync('bower_components/moment/moment.js');
-    var m = new Leaf('bower_components/moment/moment.js', source);
+    var m = new Petal('bower_components/moment/moment.js', source);
 
     assert(m.hasDefine(), 'no module is defined');
     assert.equal(m.isAnonymous, false, 'module is anonymous');
@@ -21,7 +21,7 @@ describe('Leaf - moment', function() {
 
   xit('has correct import/exports', function() {
     var source = fs.readFileSync('bower_components/moment/moment.js');
-    var m = new Leaf('bower_components/moment/moment.js', source);
+    var m = new Petal('bower_components/moment/moment.js', source);
 
     assert(m.hasDefine(), 'no module is defined');
     assert.equal(m.isAnonymous, false, 'module is anonymous');
@@ -54,7 +54,7 @@ describe('Leaf - moment', function() {
 
   xit('works with minified version', function() {
     var source = fs.readFileSync('bower_components/moment/min/moment.min.js');
-    var m = new Leaf('bower_components/moment/min/moment.js', source);
+    var m = new Petal('bower_components/moment/min/moment.js', source);
 
     assert(m.hasDefine(), 'no module is defined');
     assert.equal(m.isAnonymous, false, 'module is anonymous');
