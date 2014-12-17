@@ -15,5 +15,11 @@ describe('Petal - qunit', function() {
     expect(m.exports).to.deep.equal({ });
 
     assert.equal(m.name, undefined);
+    assert.deepEqual(m.toJSON(), {
+      "path":"bower_components/qunit/qunit/qunit.js",
+      "type":"CJS",
+      "imports": {},
+      "exports": {}
+    });
   });
 });

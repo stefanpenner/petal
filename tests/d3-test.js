@@ -9,5 +9,12 @@ describe('Petal - d3', function() {
 
     assert(m.hasDefine(), 'module has define property');
     assert.equal(m.isAnonymous, true, 'module is not named');
+
+    assert.deepEqual(m.toJSON(), {
+      "path":"bower_components/d3/d3.js",
+      "type":"AMD",
+      "imports":{".":[]},
+      "exports":{".":["default"]}
+    });
   });
 });

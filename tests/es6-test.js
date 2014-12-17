@@ -14,5 +14,12 @@ describe('Petal - es6', function() {
     expect(m.imports).to.deep.equal({bar: ['default']});
 
     expect(m.exports).to.deep.equal({'.': ['default']});
+
+    assert.deepEqual(m.toJSON(), {
+      "path":"./tests/fixtures/es6.js",
+      "type":"ES6",
+      "imports": {"bar": ["default" ]},
+      "exports": {".":   ["default" ]}}
+    );
   });
 });
