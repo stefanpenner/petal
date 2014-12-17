@@ -4,7 +4,7 @@ var fs = require('fs');
 var expect = require('chai').expect;
 
 describe('Petal - es6', function() {
-  it.only('has correct import/exports', function() {
+  it('has correct import/exports', function() {
     var source = fs.readFileSync('./tests/fixtures/es6.js');
     var m = new Petal('./tests/fixtures/es6.js', source);
 
