@@ -9,3 +9,6 @@ export {
   foo,
   baz
 }
+
+import bar from 'foo';
+import { red, green, yellow } from 'foo';
