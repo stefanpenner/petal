@@ -1,3 +1,4 @@
+//bar
 import foo from 'bar';
 var Leaf = function () {};
 export default Leaf;
@@ -9,6 +10,6 @@ export {
   foo,
   baz
 }
-
+// foo
 import bar from 'foo';
 import { red, green, yellow } from 'foo';
