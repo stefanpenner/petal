@@ -1,7 +1,7 @@
 petal
 ====
 
-[![Build Status](https://travis-ci.org/stefanpenner/leaf.svg)](https://travis-ci.org/stefanpenner/leaf)
+[![Build Status](https://travis-ci.org/stefanpenner/petal.svg)](https://travis-ci.org/stefanpenner/petal)
 
 library for inspecting and renaming various js module formats. This is still WIP but in a usable state.
 
